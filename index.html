@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="load"></div>
+
+    <ul class="notifications"></ul>
+
+    <div class="modal hidden__modal">
+        <div class="follow">
+            <div class="follow__title">
+                <h2>Folow steps</h2>
+                <div class="follow__title--img">
+                    <img src="img/modal/close.svg" alt="" width="14" class="btn__modal--close">
+                </div>
+            </div>
+            <div class="follow__upload">
+                <div class="follow__upload--container">
+                    <img src="img/modal/01.svg" alt="">
+                    <div class="follow__upload--text">
+                        <h3>Upload files & Mint token</h3>
+                        <span>Call contract method</span>
+                    </div>
+                </div>
+                <button><a href="">Start now</a></button>
+            </div>
+            <div class="follow__upload">
+                <div class="follow__upload--container">
+                    <img src="img/modal/02.svg" alt="">
+                    <div class="follow__upload--text">
+                        <h3>Upload files & Mint token</h3>
+                        <span>Call contract method</span>
+                    </div>
+                </div>
+                <button><a href="">Start now</a></button>
+            </div>
+            <div class="follow__upload">
+                <div class="follow__upload--container">
+                    <img src="img/modal/03.svg" alt="">
+                    <div class="follow__upload--text">
+                        <h3>Upload files & Mint token</h3>
+                        <span>Call contract method</span>
+                    </div>
+                </div>
+                <button><a href="">Start now</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay__modal hidden__modal"></div>
+
+    <header class="header container">
+        <div class="header__logo">
+            <a href=""><img src="img/header/logo.svg" alt="" width="40"></a>
+            <h1 class="header__logo--title">crypter</h1>
+            <hr>
+            <ul class="header__logo--list">
+                <li><a href="" class="discover">Discover</a></li>
+                <li><a href="" class="work">How it work</a></li>
+            </ul>
+        </div>
+        <div class="header__login">
+            <div class="header__login--search">
+                <input type="text" placeholder="search">
+                <img src="img/header/search.svg" alt="" width="16">
+            </div>
+            <div class="header__login--img">
+                <img src="img/header/call.svg" alt="">
+                <div class="green"></div>
+            </div>
+            <div class="header__login--btn">
+                <button class="header__login--btn__upload"><a href="uplode.html">Upload</a></button>
+                <button class="header__login--btn__wallet"><a href="connect.html">Connect Wallet</a></button>
+            </div>
+        </div>
+
+
+        <div class="header__register--container">
+            <button class="register-btn register-btn-sty">Signup/Login</button>
+            <div class="header__hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div id="register-modal" class="modal__register">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="register__btn">
+                    <h2 data-tab="#reg" class="register-title">Signup</h2>
+                    <h2 data-tab="#log" class="register-title">Login</h2>
+                </div>
+                <div class="register tabs__item" id="reg">
+
+                    <form id="register-form" method="get" action="debet.html">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" class="register-form-name">
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="register-form-email">
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" class="register-form-password">
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password" name="confirm-password"
+                                class="register-form-password">
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="submit-btn register-btn-sty">Submit</button>
+                        </div>
+                    </form>
+
+                </div>
+
+
+                <div class="included tabs__item" id="log">
+                    <!-- LOGN IN FORM by Omar Dsoky -->
+                    <form>
+                        <!--   con = Container  for items in the form-->
+                        <div class="con">
+                            <br>
+                            <div class="field-set">
+
+                                <!--   user name -->
+                                <span class="input-item">
+                                    <i class="fa fa-user-circle"></i>
+                                </span>
+                                <!--   user name Input-->
+                                <input class="form-input" id="txt-input" type="text" placeholder="@UserName" required>
+
+                                <br>
+
+                                <!--   Password -->
+
+                                <span class="input-item">
+                                    <i class="fa fa-key"></i>
+                                </span>
+                                <!--   Password Input-->
+                                <input class="form-input" type="password" placeholder="Password" id="pwd"
+                                    name="password" required>
+
+                                <!--      Show/hide password  -->
+                                <span>
+                                    <!-- <i class="fa fa-eye" ></i> -->
+                                    <img src="img/eye-open.svg" aria-hidden="true" type="button" id="eye" alt=""
+                                        width="30">
+                                    <!-- <img src="img/eye-close.svg" aria-hidden="false" type="button" id="eye" alt="" width="30"> -->
+                                </span>
+
+
+                                <br>
+                                <!--        buttons -->
+                                <!--      button LogIn -->
+                                <button class="log-in register-btn-sty"> Log In </button>
+                            </div>
+
+                            <!--   End Conrainer  -->
+                        </div>
+
+                        <!-- End Form -->
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__mobil">
+            <div class="header__mobil--logo">
+                <a href=""><img src="img/header/logo.svg" alt="" width="40"></a>
+                <h1 class="header__logo--title">crypter</h1>
+            </div>
+            <div class="header__mobil--search">
+                <input type="text" placeholder="search">
+                <img src="img/header/search.svg" alt="" width="16">
+            </div>
+            <div class="header__mobil--btn">
+                <button class="header__mobil--btn__upload"><a href="uplode.html">Upload</a></button>
+                <button class="header__mobil--btn__wallet"><a href="">Connect Wallet</a></button>
+            </div>
+        </div>
+
+        <div class="chk__switch">
+            <input class="btn-switch" type="checkbox" name="" id="chk">
+        </div>
+    </header>
+
+    <hr class="main__line">
+
+    <section class="creative container">
+        <p>Create, explore, & collect digital art NFTs.</p>
+        <h1>The new creative economy.</h1>
+        <button><a href="collectible.html">Start your search</a></button>
+    </section>
+
+    <section class="login container">
+        <img src="img/sction___network/main.png" alt="" class="login__img">
+        <div class="slider-container">
+            <div class="items" id="items">
+                <div class="item">
+                    <div class="login__network">
+                        <h1 class="login__network--title">the creator network®</h1>
+                        <div class="login__network--info">
+                            <div class="login__network--info__container">
+                                <img src="img/sction___network/avatar.png" alt="">
+                                <div class="">
+                                    <p>Creator</p>
+                                    <h4>Enrico Cole</h4>
+                                </div>
+                            </div>
+                            <div class="login__network--info__container">
+                                <img src="img/sction___network/user.png" alt="">
+                                <div class="">
+                                    <p>Instant price</p>
+                                    <h4>3.5 ETH</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login__bid">
+                        <div class="login__bid--info">
+                            <p class="login__bid--info__text">Current Bid</p>
+                            <h1>1.00 ETH</h1>
+                            <p class="login__bid--info__price">$3,618.36</p>
+                        </div>
+                        <div class="login__bid--discount">
+                            <p>Auction ending in</p>
+                            <div class="time">
+                                <div class="time__incident ">
+                                    <h2 class="time__dys">2</h2>
+                                    <span>Dys</span>
+                                </div>
+                                <div class="time__incident ">
+                                    <h2 class="time__hrs">19</h2>
+                                    <span>Hrs</span>
+                                </div>
+                                <div class="time__incident ">
+                                    <h2 class="time__mins">19</h2>
+                                    <span>mins</span>
+                                </div>
+                                <div class="time__incident ">
+                                    <h2 class="time__secs">19</h2>
+                                    <span>secs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login__btn">
+                        <button class="login__btn--bid"><a href="">Place a bid</a></button>
+                        <button class="login__btn--item"><a href="">View item</a></button>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="login__network">
+                        <h1 class="login__network--title">the creator network®</h1>
+                        <div class="login__network--info">
+                            <div class="login__network--info__container">
+                                <img src="img/sction___network/avatar.png" alt="">
+                                <div class="">
+                                    <p>Creator</p>
+                                    <h4>Enrico Cole</h4>
+                                </div>
+                            </div>
+                            <div class="login__network--info__container">
+                                <img src="img/sction___network/user.png" alt="">
+                                <div class="">
+                                    <p>Instant price</p>
+                                    <h4>3.5 ETH</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login__bid">
+                        <div class="login__bid--info">
+                            <p class="login__bid--info__text">Current Bid</p>
+                            <h1>1.00 ETH</h1>
+                            <p class="login__bid--info__price">$3,618.36</p>
+                        </div>
+                        <div class="login__bid--discount">
+                            <p>Auction ending in</p>
+                            <div class="time">
+                                <div class="time__incident ">
+                                    <h2 class="time__dys">2</h2>
+                                    <span>Dys</span>
+                                </div>
+                                <div class="time__incident ">
+                                    <h2 class="time__hrs">19</h2>
+                                    <span>Hrs</span>
+                                </div>
+                                <div class="time__incident ">
+                                    <h2 class="time__mins">19</h2>
+                                    <span>mins</span>
+                                </div>
+                                <div class="time__incident ">
+                                    <h2 class="time__secs">19</h2>
+                                    <span>secs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login__btn">
+                        <button class="login__btn--bid"><a href="">Place a bid</a></button>
+                        <button class="login__btn--item"><a href="">Place a bid</a></button>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="login__network">
+                        <h1 class="login__network--title">the creator network®</h1>
+                        <div class="login__network--info">
+                            <div class="login__network--info__container">
+                                <img src="img/sction___network/avatar.png" alt="">
+                                <div class="">
+                                    <p>Creator</p>
+                                    <h4>Enrico Cole</h4>
+                                </div>
+                            </div>
+                            <div class="login__network--info__container">
+                                <img src="img/sction___network/user.png" alt="">
+                                <div class="">
+                                    <p>Instant price</p>
+                                    <h4>3.5 ETH</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login__bid">
+                        <div class="login__bid--info">
+                            <p class="login__bid--info__text">Current Bid</p>
+                            <h1>1.00 ETH</h1>
+                            <p class="login__bid--info__price">$3,618.36</p>
+                        </div>
+                        <div class="login__bid--discount">
+                            <p>Auction ending in</p>
+                            <div class="time time2">
+                                <div class="time__incident ">
+                                    <h2 class="time__dys">2</h2>
+                                    <span>Dys</span>
+                                </div>
+                                <div class="time__incident ">
+                                    <h2 class="time__hrs">19</h2>
+                                    <span>Hrs</span>
+                                </div>
+                                <div class="time__incident ">
+                                    <h2 class="time__mins">19</h2>
+                                    <span>mins</span>
+                                </div>
+                                <div class="time__incident ">
+                                    <h2 class="time__secs">19</h2>
+                                    <span>secs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login__btn">
+                        <button class="login__btn--bid"><a href="">Place a bid</a></button>
+                        <button class="login__btn--item"><a href="">Place a bid</a></button>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="login__network">
+                        <h1 class="login__network--title">the creator network®</h1>
+                        <div class="login__network--info">
+                            <div class="login__network--info__container">
+                                <img src="img/sction___network/avatar.png" alt="">
+                                <div class="">
+                                    <p>Creator</p>
+                                    <h4>Enrico Cole</h4>
+                                </div>
+                            </div>
+                            <div class="login__network--info__container">
+                                <img src="img/sction___network/user.png" alt="">
+                                <div class="">
+                                    <p>Instant price</p>
+                                    <h4>3.5 ETH</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login__bid">
+                        <div class="login__bid--info">
+                            <p class="login__bid--info__text">Current Bid</p>
+                            <h1>1.00 ETH</h1>
+                            <p class="login__bid--info__price">$3,618.36</p>
+                        </div>
+                        <div class="login__bid--discount">
+                            <p>Auction ending in</p>
+                            <div class="time">
+                                <div class="time__incident ">
+                                    <h2 class="time__dys">2</h2>
+                                    <span>Dys</span>
+                                </div>
+                                <div class="time__incident ">
+                                    <h2 class="time__hrs">19</h2>
+                                    <span>Hrs</span>
+                                </div>
+                                <div class="time__incident ">
+                                    <h2 class="time__mins">19</h2>
+                                    <span>mins</span>
+                                </div>
+                                <div class="time__incident ">
+                                    <h2 class="time__secs">19</h2>
+                                    <span>secs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login__btn">
+                        <button class="login__btn--bid"><a href="">Place a bid</a></button>
+                        <button class="login__btn--item"><a href="">Place a bid</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="login__arrow--container">
+                <div class="login__arrow">
+                    <div class="login__arrow--border" id="arrow--left">
+                        <img src="img/sction___network/left.svg" alt="">
+                    </div>
+                    <div class="login__arrow--border" id="arrow--right">
+                        <img src="img/sction___network/right.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="future container">
+        <div class="future__box" data-aos="fade-right">
+            <div class="future__main">
+                <img src="img/section__future/main/main.png" class="future__main--img" alt="">
+                <div class="future__main--prof">
+                    <div class="future__main--prof__log">
+                        <img src="img/section__future/main/avatar.png" alt="">
+                        <div class="future__main--prof__text">
+                            <h3>The future of ETH®</h3>
+                            <span>18 in stock</span>
+                        </div>
+                    </div>
+                    <div class="future__main--prof__price">
+                        <span>Highest bid</span>
+                        <div class="">1.125 ETH</div>
+                    </div>
+                </div>
+            </div>
+            <div class="future__bid">
+                <div class="future__bid--die">
+                    <img src="img/section__future/bid/01.png" class="future__main--img" alt="">
+                    <div class="future__bid--die__prof">
+                        <h1>ETH never die</h1>
+                        <div class="future__bid--die__text">
+                            <img src="img/section__future/bid/01-avatar.png" alt="">
+                            <div class="">0.27 ETH</div>
+                            <span>1 of 12</span>
+                        </div>
+                        <div><button class="btn__modal--open">Place a bid</button></div>
+                    </div>
+                </div>
+                <div class="future__bid--die">
+                    <img src="img/section__future/bid/02.png" class="future__main--img" alt="">
+                    <div class="future__bid--die__prof">
+                        <h1>Future coming soon</h1>
+                        <div class="future__bid--die__text">
+                            <img src="img/section__future/bid/02-avatar.png" alt="">
+                            <div class="">0.27 ETH</div>
+                            <span>1 of 4</span>
+                        </div>
+                        <div><button class="btn__modal--open__yellow">Place a bid</button></div>
+                    </div>
+                </div>
+                <div class="future__bid--die">
+                    <img src="img/section__future/bid/03.png" class="future__main--img" alt="">
+                    <div class="future__bid--die__prof">
+                        <h1>Elon Musk silver coin 3d print</h1>
+                        <div class="future__bid--die__text">
+                            <img src="img/section__future/bid/01-avatar.png" alt="">
+                            <div class="">0.27 ETH</div>
+                            <span>1 of 3</span>
+                        </div>
+                        <div><button class="btn__modal--open__pink">Place a bid</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="future__lates">
+            <hr class="future__lates--line">
+            <div class="future__container">
+                <h4>Latest upload from creators 🔥</h4>
+                <div class="future__lates--prof">
+                    <img src="img/section__future/latest/01.png" alt="">
+                    <div class="future__lates--prof__info">
+                        <h3>Payton Harris</h3>
+                        <span>2.456</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="future__lates--prof">
+                    <img src="img/section__future/latest/02.png" alt="">
+                    <div class="future__lates--prof__info">
+                        <h3>Payton Harris</h3>
+                        <span>2.456</span>
+                    </div>
+                </div>
+                <!-- <hr> -->
+                <div class="future__lates--prof">
+                    <img src="img/section__future/latest/03.png" alt="">
+                    <div class="future__lates--prof__info">
+                        <h3>Payton Harris</h3>
+                        <span>2.456</span>
+                    </div>
+                </div>
+                <!-- <hr> -->
+                <div class="future__lates--prof">
+                    <img src="img/section__future/latest/04.png" alt="">
+                    <div class="future__lates--prof__info">
+                        <h3>Payton Harris</h3>
+                        <span>2.456</span>
+                    </div>
+                </div>
+                <div class="future__lates--prof">
+                    <img src="img/section__future/latest/01.png" alt="">
+                    <div class="future__lates--prof__info">
+                        <h3>Payton Harris</h3>
+                        <span>2.456</span>
+                    </div>
+                </div>
+                <!-- <hr> -->
+                <div class="future__lates--prof">
+                    <img src="img/section__future/latest/02.png" alt="">
+                    <div class="future__lates--prof__info">
+                        <h3>Payton Harris</h3>
+                        <span>2.456</span>
+                    </div>
+                </div>
+                <!-- <hr> -->
+                <div class="future__lates--prof">
+                    <img src="img/section__future/latest/03.png" alt="">
+                    <div class="future__lates--prof__info">
+                        <h3>Payton Harris</h3>
+                        <span>2.456</span>
+                    </div>
+                </div>
+                <!-- <hr> -->
+                <div class="future__lates--prof">
+                    <img src="img/section__future/latest/04.png" alt="">
+                    <div class="future__lates--prof__info">
+                        <h3>Payton Harris</h3>
+                        <span>2.456</span>
+                    </div>
+                </div>
+                <div class="future__lates--prof">
+                    <img src="img/section__future/latest/04.png" alt="">
+                    <div class="future__lates--prof__info">
+                        <h3>Payton Harris</h3>
+                        <span>2.456</span>
+                    </div>
+                </div>
+                <div class="future__lates--prof">
+                    <img src="img/section__future/latest/04.png" alt="">
+                    <div class="future__lates--prof__info">
+                        <h3>Payton Harris</h3>
+                        <span>2.456</span>
+                    </div>
+                </div>
+                <div class="future__lates--btn">
+                    <button>Discover more</button>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <div class="seller__container">
+        <section class="seller container">
+            <div class="seller__info">
+                <div class="seller__info--text">
+                    <p>Popular</p>
+                    <h1>Sellers</h1>
+                </div>
+                <div class="seller__info--day">
+                    <!-- <span>Today</span> -->
+                    today
+                </div>
+            </div>
+
+            <div class="seller__slider" id="seller__slider">
+
+                <div class="wrapper">
+                    <div class="wrapper__arrow">
+                        <div class="seller__arrow--border " id="btn-prev">
+                            <img src="img/section__seller/icons/left.svg" alt="">
+                        </div>
+
+                        <div class="seller__arrow--border " id="btn-next">
+                            <img src="img/section__seller/icons/right.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="seller__items" id="seller__items">
+
+                        <div class="seller__item">
+
+                            <div class="seller__popular">
+                                <div class="seller__popular--btn">
+                                    <div class="seller__popular--btn__contain seller__popular--btn__edd">
+                                        <img src="img/section__seller/icons/01.svg" alt="">
+                                        <span>#</span>
+                                    </div>
+                                    <img src="img/section__seller/icons/stroke.svg" alt="">
+                                </div>
+                                <hr>
+                                <div class="seller__popular--prof">
+                                    <img src="img/section__seller/01.png" alt="">
+                                    <div class="">
+                                        <p>Edd Harris</p>
+                                        <span>2.456</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="seller__popular">
+                                <div class="seller__popular--btn">
+                                    <div class="seller__popular--btn__contain seller__popular--btn__odell">
+                                        <img src="img/section__seller/icons/02.svg" alt="">
+                                        <span>#</span>
+                                    </div>
+                                    <img src="img/section__seller/icons/stroke.svg" alt="">
+                                </div>
+                                <hr>
+                                <div class="seller__popular--prof">
+                                    <img src="img/section__seller/02.png" alt="">
+                                    <div class="">
+                                        <p>Odell Hane</p>
+                                        <span>2.456</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="seller__popular">
+                                <div class="seller__popular--btn">
+                                    <div class="seller__popular--btn__contain seller__popular--btn__kup">
+                                        <img src="img/section__seller/icons/03.svg" alt="">
+                                        <span>#</span>
+                                    </div>
+                                    <img src="img/section__seller/icons/stroke.svg" alt="">
+                                </div>
+                                <hr>
+                                <div class="seller__popular--prof">
+                                    <img src="img/section__seller/03.png" alt="">
+                                    <div class="">
+                                        <p>Marlee Kuphal</p>
+                                        <span>2.456</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="seller__popular">
+                                <div class="seller__popular--btn">
+                                    <div class="seller__popular--btn__contain seller__popular--btn__kunde">
+                                        <img src="img/section__seller/icons/04.svg" alt="">
+                                        <span>#</span>
+                                    </div>
+                                    <img src="img/section__seller/icons/stroke.svg" alt="">
+                                </div>
+                                <hr>
+                                <div class="seller__popular--prof">
+                                    <img src="img/section__seller/04.png" alt="">
+                                    <div class="">
+                                        <p>Payton Kunde</p>
+                                        <span>2.456</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="seller__popular">
+                                <div class="seller__popular--btn">
+                                    <div class="seller__popular--btn__contain seller__popular--btn__payton">
+                                        <img src="img/section__seller/icons/05.svg" alt="">
+                                        <span>#</span>
+                                    </div>
+                                    <img src="img/section__seller/icons/stroke.svg" alt="">
+                                </div>
+                                <hr>
+                                <div class="seller__popular--prof">
+                                    <img src="img/section__seller/05.png" alt="">
+                                    <div class="">
+                                        <p>Payton Buckridge</p>
+                                        <span>2.456</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="seller__item">
+
+                            <div class="seller__popular">
+                                <div class="seller__popular--btn">
+                                    <div class="seller__popular--btn__contain seller__popular--btn__edd">
+                                        <img src="img/section__seller/icons/01.svg" alt="">
+                                        <span>#</span>
+                                    </div>
+                                    <img src="img/section__seller/icons/stroke.svg" alt="">
+                                </div>
+                                <hr>
+                                <div class="seller__popular--prof">
+                                    <img src="img/section__seller/01.png" alt="">
+                                    <div class="">
+                                        <p>Edd Harris</p>
+                                        <span>2.456</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="seller__popular">
+                                <div class="seller__popular--btn">
+                                    <div class="seller__popular--btn__contain seller__popular--btn__odell">
+                                        <img src="img/section__seller/icons/02.svg" alt="">
+                                        <span>#</span>
+                                    </div>
+                                    <img src="img/section__seller/icons/stroke.svg" alt="">
+                                </div>
+                                <hr>
+                                <div class="seller__popular--prof">
+                                    <img src="img/section__seller/02.png" alt="">
+                                    <div class="">
+                                        <p>Odell Hane</p>
+                                        <span>2.456</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="seller__popular">
+                                <div class="seller__popular--btn">
+                                    <div class="seller__popular--btn__contain seller__popular--btn__kup">
+                                        <img src="img/section__seller/icons/03.svg" alt="">
+                                        <span>#</span>
+                                    </div>
+                                    <img src="img/section__seller/icons/stroke.svg" alt="">
+                                </div>
+                                <hr>
+                                <div class="seller__popular--prof">
+                                    <img src="img/section__seller/03.png" alt="">
+                                    <div class="">
+                                        <p>Marlee Kuphal</p>
+                                        <span>2.456</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="seller__popular">
+                                <div class="seller__popular--btn">
+                                    <div class="seller__popular--btn__contain seller__popular--btn__kunde">
+                                        <img src="img/section__seller/icons/04.svg" alt="">
+                                        <span>#</span>
+                                    </div>
+                                    <img src="img/section__seller/icons/stroke.svg" alt="">
+                                </div>
+                                <hr>
+                                <div class="seller__popular--prof">
+                                    <img src="img/section__seller/04.png" alt="">
+                                    <div class="">
+                                        <p>Payton Kunde</p>
+                                        <span>2.456</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="seller__popular">
+                                <div class="seller__popular--btn">
+                                    <div class="seller__popular--btn__contain seller__popular--btn__payton">
+                                        <img src="img/section__seller/icons/05.svg" alt="">
+                                        <span>#</span>
+                                    </div>
+                                    <img src="img/section__seller/icons/stroke.svg" alt="">
+                                </div>
+                                <hr>
+                                <div class="seller__popular--prof">
+                                    <img src="img/section__seller/05.png" alt="">
+                                    <div class="">
+                                        <p>Payton Buckridge</p>
+                                        <span>2.456</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="seller__item">
+
+                            <div class="seller__popular">
+                                <div class="seller__popular--btn">
+                                    <div class="seller__popular--btn__contain seller__popular--btn__edd">
+                                        <img src="img/section__seller/icons/01.svg" alt="">
+                                        <span>#</span>
+                                    </div>
+                                    <img src="img/section__seller/icons/stroke.svg" alt="">
+                                </div>
+                                <hr>
+                                <div class="seller__popular--prof">
+                                    <img src="img/section__seller/01.png" alt="">
+                                    <div class="">
+                                        <p>Edd Harris</p>
+                                        <span>2.456</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="seller__popular">
+                                <div class="seller__popular--btn">
+                                    <div class="seller__popular--btn__contain seller__popular--btn__odell">
+                                        <img src="img/section__seller/icons/02.svg" alt="">
+                                        <span>#</span>
+                                    </div>
+                                    <img src="img/section__seller/icons/stroke.svg" alt="">
+                                </div>
+                                <hr>
+                                <div class="seller__popular--prof">
+                                    <img src="img/section__seller/02.png" alt="">
+                                    <div class="">
+                                        <p>Odell Hane</p>
+                                        <span>2.456</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="seller__popular">
+                                <div class="seller__popular--btn">
+                                    <div class="seller__popular--btn__contain seller__popular--btn__kup">
+                                        <img src="img/section__seller/icons/03.svg" alt="">
+                                        <span>#</span>
+                                    </div>
+                                    <img src="img/section__seller/icons/stroke.svg" alt="">
+                                </div>
+                                <hr>
+                                <div class="seller__popular--prof">
+                                    <img src="img/section__seller/03.png" alt="">
+                                    <div class="">
+                                        <p>Marlee Kuphal</p>
+                                        <span>2.456</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="seller__popular">
+                                <div class="seller__popular--btn">
+                                    <div class="seller__popular--btn__contain seller__popular--btn__kunde">
+                                        <img src="img/section__seller/icons/04.svg" alt="">
+                                        <span>#</span>
+                                    </div>
+                                    <img src="img/section__seller/icons/stroke.svg" alt="">
+                                </div>
+                                <hr>
+                                <div class="seller__popular--prof">
+                                    <img src="img/section__seller/04.png" alt="">
+                                    <div class="">
+                                        <p>Payton Kunde</p>
+                                        <span>2.456</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="seller__popular">
+                                <div class="seller__popular--btn">
+                                    <div class="seller__popular--btn__contain seller__popular--btn__payton">
+                                        <img src="img/section__seller/icons/05.svg" alt="">
+                                        <span>#</span>
+                                    </div>
+                                    <img src="img/section__seller/icons/stroke.svg" alt="">
+                                </div>
+                                <hr>
+                                <div class="seller__popular--prof">
+                                    <img src="img/section__seller/05.png" alt="">
+                                    <div class="">
+                                        <p>Payton Buckridge</p>
+                                        <span>2.456</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+    </div>
+
+    <section class="bid container">
+        <h1 class="bid__title">Hot bid</h1>
+        <div class="bid__container">
+            <div class="bid__main" data-aos="fade-up">
+                <img src="img/section__bid/01.png" alt="" class="bid__main--img">
+                <div class="bid__container--price">
+                    <h4>Amazing digital art</h4>
+                    <div>2.45 ETH</div>
+                </div>
+                <div class="bid__container--info">
+                    <div class="bid__container--info__prof">
+                        <img src="img/section__bid/avatar/01.png" alt="" class="bid__container--info__avatar--one">
+                        <img src="img/section__bid/avatar/02.png" alt="" class="bid__container--info__avatar--second">
+                        <img src="img/section__bid/avatar/03.png" alt="" class="bid__container--info__avatar--three">
+                    </div>
+                    <p>3 in stock</p>
+                </div>
+                <hr>
+                <div class="bid__container--new">
+                    <div class="bid__container--new__price">
+                        <img src="img/section__bid/icon/Line.svg" alt="">
+                        <p>Highest bid</p>
+                        <h5>0.001 ETH</h5>
+                    </div>
+                    <p>New bid 🔥</p>
+                </div>
+            </div>
+            <div class="bid__main" data-aos="fade-down">
+                <img src="img/section__bid/02.png" alt="" class="bid__main--img">
+                <div class="bid__container--price">
+                    <h4>Amazing digital art</h4>
+                    <div>2.45 ETH</div>
+                </div>
+                <div class="bid__container--info">
+                    <div class="bid__container--info__prof">
+                        <img src="img/section__bid/avatar/01.png" alt="" class="bid__container--info__avatar--one">
+                        <img src="img/section__bid/avatar/02.png" alt="" class="bid__container--info__avatar--second">
+                        <img src="img/section__bid/avatar/03.png" alt="" class="bid__container--info__avatar--three">
+                    </div>
+                    <p>3 in stock</p>
+                </div>
+                <hr>
+                <div class="bid__container--new">
+                    <div class="bid__container--new__price">
+                        <img src="img/section__bid/icon/Line.svg" alt="">
+                        <p>Highest bid</p>
+                        <h5>0.001 ETH</h5>
+                    </div>
+                    <p>New bid 🔥</p>
+                </div>
+            </div>
+            <div class="bid__main" data-aos="fade-up">
+                <img src="img/section__bid/03.png" alt="" class="bid__main--img">
+                <div class="bid__container--price">
+                    <h4>Amazing digital art</h4>
+                    <div>2.45 ETH</div>
+                </div>
+                <div class="bid__container--info">
+                    <div class="bid__container--info__prof">
+                        <img src="img/section__bid/avatar/01.png" alt="" class="bid__container--info__avatar--one">
+                        <img src="img/section__bid/avatar/02.png" alt="" class="bid__container--info__avatar--second">
+                        <img src="img/section__bid/avatar/03.png" alt="" class="bid__container--info__avatar--three">
+                    </div>
+                    <p>3 in stock</p>
+                </div>
+                <hr>
+                <div class="bid__container--new">
+                    <div class="bid__container--new__price">
+                        <img src="img/section__bid/icon/Line.svg" alt="">
+                        <p>Highest bid</p>
+                        <h5>0.001 ETH</h5>
+                    </div>
+                    <p>New bid 🔥</p>
+                </div>
+            </div>
+            <div class="bid__main" data-aos="fade-down">
+                <img src="img/section__bid/04.png" alt="" class="bid__main--img">
+                <div class="bid__container--price">
+                    <h4>Amazing digital art</h4>
+                    <div>2.45 ETH</div>
+                </div>
+                <div class="bid__container--info">
+                    <div class="bid__container--info__prof">
+                        <img src="img/section__bid/avatar/01.png" alt="" class="bid__container--info__avatar--one">
+                        <img src="img/section__bid/avatar/02.png" alt="" class="bid__container--info__avatar--second">
+                        <img src="img/section__bid/avatar/03.png" alt="" class="bid__container--info__avatar--three">
+                    </div>
+                    <p>3 in stock</p>
+                </div>
+                <hr>
+                <div class="bid__container--new">
+                    <div class="bid__container--new__price">
+                        <img src="img/section__bid/icon/Line.svg" alt="">
+                        <p>Highest bid</p>
+                        <h5>0.001 ETH</h5>
+                    </div>
+                    <p>New bid 🔥</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="collections__container">
+        <section class="collections container">
+            <h1 class="collections__title">Hot collections</h1>
+            <div class="collections__block">
+                <div class="collections__main" data-aos="fade-up">
+                    <div class="collections__main--img">
+                        <img src="img/section__collections/01/01.png" alt="">
+                        <div class="collections__secondary--img">
+                            <img src="img/section__collections/01/02.png" alt="">
+                            <img src="img/section__collections/01/03.png" alt="">
+                            <img src="img/section__collections/01/04.png" alt="">
+                        </div>
+                    </div>
+
+                    <h2>Awesome collection</h2>
+                    <div class="collections__main--prof">
+                        <div class="collections__main--prof__info">
+                            <img src="img/section__collections/avatar/01.png" alt="">
+                            <p>by Kennith Olson</p>
+                        </div>
+                        <button><a href="">4 items</a></button>
+                    </div>
+                </div>
+                <div class="collections__main" data-aos="fade-down">
+                    <div class="collections__main--img">
+                        <img src="img/section__collections/02/01.png" alt="">
+                        <div class="collections__secondary--img">
+                            <img src="img/section__collections/02/02.png" alt="">
+                            <img src="img/section__collections/02/03.png" alt="">
+                            <img src="img/section__collections/02/04.png" alt="">
+                        </div>
+                    </div>
+
+                    <h2>Awesome collection</h2>
+                    <div class="collections__main--prof">
+                        <div class="collections__main--prof__info">
+                            <img src="img/section__collections/avatar/01.png" alt="">
+                            <p>by Kennith Olson</p>
+                        </div>
+                        <button><a href="">4 items</a></button>
+                    </div>
+                </div>
+                <div class="collections__main" data-aos="fade-up">
+                    <div class="collections__main--img">
+                        <img src="img/section__collections/03/01.png" alt="">
+                        <div class="collections__secondary--img">
+                            <img src="img/section__collections/03/02.png" alt="">
+                            <img src="img/section__collections/03/03.png" alt="">
+                            <img src="img/section__collections/03/04.png" alt="">
+                        </div>
+                    </div>
+
+                    <h2>Awesome collection</h2>
+                    <div class="collections__main--prof">
+                        <div class="collections__main--prof__info">
+                            <img src="img/section__collections/avatar/01.png" alt="">
+                            <p>by Kennith Olson</p>
+                        </div>
+                        <button><a href="">4 items</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="discovery container">
+        <h1 class="discovery__title">Discover</h1>
+        <div class="discovery__btns">
+            <p class="discovery__btn"><a href="">Recently added</a></p>
+            <ul class="discovery__menu" id="discovery__menu">
+                <li><a href="">All items</a></li>
+                <li><a href="">Art</a></li>
+                <li><a href="">Game</a></li>
+                <li><a href="">Photography</a></li>
+                <li><a href="">Music</a></li>
+                <li><a href="">Video</a></li>
+            </ul>
+        </div>
+
+        <hr class="discovery__line">
+        <div class="discovery__filter">
+            <div class="discovery__filter--container">
+                <span>All</span>
+                <button data-f="all" class="discovery__filter--container__item">All product</button>
+            </div>
+            <div class="discovery__filter--container">
+                <span>Price</span>
+                <button data-f="price" class="discovery__filter--container__item">Highest price</button>
+            </div>
+            <div class="discovery__filter--container">
+                <span>likes</span>
+                <button data-f="likes" class="discovery__filter--container__item">Most liked</button>
+            </div>
+            <div class="discovery__filter--container">
+                <span>Creator</span>
+                <button data-f="creator" class="discovery__filter--container__item">Verified only</button>
+            </div>
+            <div class="discovery__filter--container">
+                <span>Price range</span>
+            </div>
+        </div>
+
+        <div class="filter__dropdown--container">
+            <div class="dropdown">
+                <button class="dropbtn">Recently added</button>
+                <ul id="myDropdown" class="dropdown-content">
+                    <li><a href="">All items</a></li>
+                    <li><a href="">Art</a></li>
+                    <li><a href="">Game</a></li>
+                    <li><a href="">Photography</a></li>
+                    <li><a href="">Music</a></li>
+                    <li><a href="">Video</a></li>
+                </ul>
+            </div>
+
+            <div class="filter__dropdown">
+                <button class="filter__dropbtn">Filter added</button>
+                <ul id="filter__myDropdown" class="filter__dropdown-content">
+                    <li>
+                        <p data-t="all" class="filter__dropdown--container__item">All product</p>
+                    </li>
+                    <li>
+                        <p data-t="price" class="filter__dropdown--container__item">Highest price</p>
+                    </li>
+                    <li>
+                        <p data-t="likes" class="filter__dropdown--container__item">Most liked</p>
+                    </li>
+                    <li>
+                        <p data-t="creator" class="filter__dropdown--container__item">Verified only</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="discovery__container" id="discovery__container">
+            <div class="discovery__main price">
+                <img src="img/section__discovery/main/01.png" alt="">
+                <div class="discovery__container--price">
+                    <h4>Amazing digital art</h4>
+                    <div>2.45 ETH</div>
+                </div>
+                <div class="discovery__container--info">
+                    <div class="discovery__container--info__prof">
+                        <img src="img/section__discovery/avatar/01.png" alt=""
+                            class="discovery__container--info__avatar--one">
+                        <img src="img/section__discovery/avatar/02.png" alt=""
+                            class="discovery__container--info__avatar--second">
+                        <img src="img/section__discovery/avatar/03.png" alt=""
+                            class="discovery__container--info__avatar--three">
+                    </div>
+                    <p>3 in stock</p>
+                </div>
+                <hr>
+                <div class="discovery__container--new">
+                    <div class="discovery__container--new__price">
+                        <img src="img/section__bid/icon/Line.svg" alt="">
+                        <p>Highest bid</p>
+                        <h5>0.001 ETH</h5>
+                    </div>
+                    <p>New bid 🔥</p>
+                </div>
+            </div>
+            <div class="discovery__main likes">
+                <img src="img/section__discovery/main/02.png" alt="">
+                <div class="bid__container--price">
+                    <h4>Amazing digital art</h4>
+                    <div>2.45 ETH</div>
+                </div>
+                <div class="discovery__container--info">
+                    <div class="discovery__container--info__prof">
+                        <img src="img/section__discovery/avatar/01.png" alt=""
+                            class="discovery__container--info__avatar--one">
+                        <img src="img/section__discovery/avatar/02.png" alt=""
+                            class="discovery__container--info__avatar--second">
+                        <img src="img/section__discovery/avatar/03.png" alt=""
+                            class="discovery__container--info__avatar--three">
+                    </div>
+                    <p>3 in stock</p>
+                </div>
+                <hr>
+                <div class="discovery__container--new">
+                    <div class="discovery__container--new__price">
+                        <img src="img/section__bid/icon/Line.svg" alt="">
+                        <p>Highest bid</p>
+                        <h5>0.001 ETH</h5>
+                    </div>
+                    <p>New bid 🔥</p>
+                </div>
+            </div>
+            <div class="discovery__main likes">
+                <img src="img/section__discovery/main/03.png" alt="">
+                <div class="discovery__container--price">
+                    <h4>Amazing digital art</h4>
+                    <div>2.45 ETH</div>
+                </div>
+                <div class="discovery__container--info">
+                    <div class="discovery__container--info__prof">
+                        <img src="img/section__discovery/avatar/01.png" alt=""
+                            class="discovery__container--info__avatar--one">
+                        <img src="img/section__discovery/avatar/02.png" alt=""
+                            class="discovery__container--info__avatar--second">
+                        <img src="img/section__discovery/avatar/03.png" alt=""
+                            class="discovery__container--info__avatar--three">
+                    </div>
+                    <p>3 in stock</p>
+                </div>
+                <hr>
+                <div class="discovery__container--new">
+                    <div class="discovery__container--new__price">
+                        <img src="img/section__bid/icon/Line.svg" alt="">
+                        <p>Highest bid</p>
+                        <h5>0.001 ETH</h5>
+                    </div>
+                    <p>New bid 🔥</p>
+                </div>
+            </div>
+            <div class="discovery__main creator">
+                <img src="img/section__discovery/main/04.png" alt="">
+                <div class="bid__container--price">
+                    <h4>Amazing digital art</h4>
+                    <div>2.45 ETH</div>
+                </div>
+                <div class="discovery__container--info">
+                    <div class="discovery__container--info__prof">
+                        <img src="img/section__discovery/avatar/01.png" alt=""
+                            class="discovery__container--info__avatar--one">
+                        <img src="img/section__discovery/avatar/02.png" alt=""
+                            class="discovery__container--info__avatar--second">
+                        <img src="img/section__discovery/avatar/03.png" alt=""
+                            class="discovery__container--info__avatar--three">
+                    </div>
+                    <p>3 in stock</p>
+                </div>
+                <hr>
+                <div class="discovery__container--new">
+                    <div class="discovery__container--new__price">
+                        <img src="img/section__bid/icon/Line.svg" alt="">
+                        <p>Highest bid</p>
+                        <h5>0.001 ETH</h5>
+                    </div>
+                    <p>New bid 🔥</p>
+                </div>
+            </div>
+            <div class="discovery__main creator">
+                <img src="img/section__discovery/main/05.png" alt="">
+                <div class="discovery__container--price">
+                    <h4>Amazing digital art</h4>
+                    <div>2.45 ETH</div>
+                </div>
+                <div class="discovery__container--info">
+                    <div class="discovery__container--info__prof">
+                        <img src="img/section__discovery/avatar/01.png" alt=""
+                            class="discovery__container--info__avatar--one">
+                        <img src="img/section__discovery/avatar/02.png" alt=""
+                            class="discovery__container--info__avatar--second">
+                        <img src="img/section__discovery/avatar/03.png" alt=""
+                            class="discovery__container--info__avatar--three">
+                    </div>
+                    <p>3 in stock</p>
+                </div>
+                <hr>
+                <div class="discovery__container--new">
+                    <div class="discovery__container--new__price">
+                        <img src="img/section__bid/icon/Line.svg" alt="">
+                        <p>Highest bid</p>
+                        <h5>0.001 ETH</h5>
+                    </div>
+                    <p>New bid 🔥</p>
+                </div>
+            </div>
+            <div class="discovery__main price">
+                <img src="img/section__discovery/main/06.png" alt="">
+                <div class="bid__container--price">
+                    <h4>Amazing digital art</h4>
+                    <div>2.45 ETH</div>
+                </div>
+                <div class="discovery__container--info">
+                    <div class="discovery__container--info__prof">
+                        <img src="img/section__discovery/avatar/01.png" alt=""
+                            class="discovery__container--info__avatar--one">
+                        <img src="img/section__discovery/avatar/02.png" alt=""
+                            class="discovery__container--info__avatar--second">
+                        <img src="img/section__discovery/avatar/03.png" alt=""
+                            class="discovery__container--info__avatar--three">
+                    </div>
+                    <p>3 in stock</p>
+                </div>
+                <hr>
+                <div class="discovery__container--new">
+                    <div class="discovery__container--new__price">
+                        <img src="img/section__bid/icon/Line.svg" alt="">
+                        <p>Highest bid</p>
+                        <h5>0.001 ETH</h5>
+                    </div>
+                    <p>New bid 🔥</p>
+                </div>
+            </div>
+            <div class="discovery__main">
+                <img src="img/section__discovery/main/07.png" alt="">
+                <div class="discovery__container--price">
+                    <h4>Amazing digital art</h4>
+                    <div>2.45 ETH</div>
+                </div>
+                <div class="discovery__container--info">
+                    <div class="discovery__container--info__prof">
+                        <img src="img/section__discovery/avatar/01.png" alt=""
+                            class="discovery__container--info__avatar--one">
+                        <img src="img/section__discovery/avatar/02.png" alt=""
+                            class="discovery__container--info__avatar--second">
+                        <img src="img/section__discovery/avatar/03.png" alt=""
+                            class="discovery__container--info__avatar--three">
+                    </div>
+                    <p>3 in stock</p>
+                </div>
+                <hr>
+                <div class="discovery__container--new">
+                    <div class="discovery__container--new__price">
+                        <img src="img/section__bid/icon/Line.svg" alt="">
+                        <p>Highest bid</p>
+                        <h5>0.001 ETH</h5>
+                    </div>
+                    <p>New bid 🔥</p>
+                </div>
+            </div>
+            <div class="discovery__main alld">
+                <img src="img/section__discovery/main/08.png" alt="">
+                <div class="bid__container--price">
+                    <h4>Amazing digital art</h4>
+                    <div>2.45 ETH</div>
+                </div>
+                <div class="discovery__container--info">
+                    <div class="discovery__container--info__prof">
+                        <img src="img/section__discovery/avatar/01.png" alt=""
+                            class="discovery__container--info__avatar--one">
+                        <img src="img/section__discovery/avatar/02.png" alt=""
+                            class="discovery__container--info__avatar--second">
+                        <img src="img/section__discovery/avatar/03.png" alt=""
+                            class="discovery__container--info__avatar--three">
+                    </div>
+                    <p>3 in stock</p>
+                </div>
+                <hr>
+                <div class="discovery__container--new">
+                    <div class="discovery__container--new__price">
+                        <img src="img/section__bid/icon/Line.svg" alt="">
+                        <p>Highest bid</p>
+                        <h5>0.001 ETH</h5>
+                    </div>
+                    <p>New bid 🔥</p>
+                </div>
+            </div>
+            <div class="discovery__main creator">
+                <img src="img/section__discovery/main/04.png" alt="">
+                <div class="bid__container--price">
+                    <h4>Amazing digital art</h4>
+                    <div>2.45 ETH</div>
+                </div>
+                <div class="discovery__container--info">
+                    <div class="discovery__container--info__prof">
+                        <img src="img/section__discovery/avatar/01.png" alt=""
+                            class="discovery__container--info__avatar--one">
+                        <img src="img/section__discovery/avatar/02.png" alt=""
+                            class="discovery__container--info__avatar--second">
+                        <img src="img/section__discovery/avatar/03.png" alt=""
+                            class="discovery__container--info__avatar--three">
+                    </div>
+                    <p>3 in stock</p>
+                </div>
+                <hr>
+                <div class="discovery__container--new">
+                    <div class="discovery__container--new__price">
+                        <img src="img/section__bid/icon/Line.svg" alt="">
+                        <p>Highest bid</p>
+                        <h5>0.001 ETH</h5>
+                    </div>
+                    <p>New bid 🔥</p>
+                </div>
+            </div>
+            <div class="discovery__main creator">
+                <img src="img/section__discovery/main/05.png" alt="">
+                <div class="discovery__container--price">
+                    <h4>Amazing digital art</h4>
+                    <div>2.45 ETH</div>
+                </div>
+                <div class="discovery__container--info">
+                    <div class="discovery__container--info__prof">
+                        <img src="img/section__discovery/avatar/01.png" alt=""
+                            class="discovery__container--info__avatar--one">
+                        <img src="img/section__discovery/avatar/02.png" alt=""
+                            class="discovery__container--info__avatar--second">
+                        <img src="img/section__discovery/avatar/03.png" alt=""
+                            class="discovery__container--info__avatar--three">
+                    </div>
+                    <p>3 in stock</p>
+                </div>
+                <hr>
+                <div class="discovery__container--new">
+                    <div class="discovery__container--new__price">
+                        <img src="img/section__bid/icon/Line.svg" alt="">
+                        <p>Highest bid</p>
+                        <h5>0.001 ETH</h5>
+                    </div>
+                    <p>New bid 🔥</p>
+                </div>
+            </div>
+            <div class="discovery__main price">
+                <img src="img/section__discovery/main/06.png" alt="">
+                <div class="bid__container--price">
+                    <h4>Amazing digital art</h4>
+                    <div>2.45 ETH</div>
+                </div>
+                <div class="discovery__container--info">
+                    <div class="discovery__container--info__prof">
+                        <img src="img/section__discovery/avatar/01.png" alt=""
+                            class="discovery__container--info__avatar--one">
+                        <img src="img/section__discovery/avatar/02.png" alt=""
+                            class="discovery__container--info__avatar--second">
+                        <img src="img/section__discovery/avatar/03.png" alt=""
+                            class="discovery__container--info__avatar--three">
+                    </div>
+                    <p>3 in stock</p>
+                </div>
+                <hr>
+                <div class="discovery__container--new">
+                    <div class="discovery__container--new__price">
+                        <img src="img/section__bid/icon/Line.svg" alt="">
+                        <p>Highest bid</p>
+                        <h5>0.001 ETH</h5>
+                    </div>
+                    <p>New bid 🔥</p>
+                </div>
+            </div>
+            <div class="discovery__main">
+                <img src="img/section__discovery/main/07.png" alt="">
+                <div class="discovery__container--price">
+                    <h4>Amazing digital art</h4>
+                    <div>2.45 ETH</div>
+                </div>
+                <div class="discovery__container--info">
+                    <div class="discovery__container--info__prof">
+                        <img src="img/section__discovery/avatar/01.png" alt=""
+                            class="discovery__container--info__avatar--one">
+                        <img src="img/section__discovery/avatar/02.png" alt=""
+                            class="discovery__container--info__avatar--second">
+                        <img src="img/section__discovery/avatar/03.png" alt=""
+                            class="discovery__container--info__avatar--three">
+                    </div>
+                    <p>3 in stock</p>
+                </div>
+                <hr>
+                <div class="discovery__container--new">
+                    <div class="discovery__container--new__price">
+                        <img src="img/section__bid/icon/Line.svg" alt="">
+                        <p>Highest bid</p>
+                        <h5>0.001 ETH</h5>
+                    </div>
+                    <p>New bid 🔥</p>
+                </div>
+            </div>
+            <div class="discovery__main alld">
+                <img src="img/section__discovery/main/08.png" alt="">
+                <div class="bid__container--price">
+                    <h4>Amazing digital art</h4>
+                    <div>2.45 ETH</div>
+                </div>
+                <div class="discovery__container--info">
+                    <div class="discovery__container--info__prof">
+                        <img src="img/section__discovery/avatar/01.png" alt=""
+                            class="discovery__container--info__avatar--one">
+                        <img src="img/section__discovery/avatar/02.png" alt=""
+                            class="discovery__container--info__avatar--second">
+                        <img src="img/section__discovery/avatar/03.png" alt=""
+                            class="discovery__container--info__avatar--three">
+                    </div>
+                    <p>3 in stock</p>
+                </div>
+                <hr>
+                <div class="discovery__container--new">
+                    <div class="discovery__container--new__price">
+                        <img src="img/section__bid/icon/Line.svg" alt="">
+                        <p>Highest bid</p>
+                        <h5>0.001 ETH</h5>
+                    </div>
+                    <p>New bid 🔥</p>
+                </div>
+            </div>
+            <div class="discovery__main price">
+                <img src="img/section__discovery/main/06.png" alt="">
+                <div class="bid__container--price">
+                    <h4>Amazing digital art</h4>
+                    <div>2.45 ETH</div>
+                </div>
+                <div class="discovery__container--info">
+                    <div class="discovery__container--info__prof">
+                        <img src="img/section__discovery/avatar/01.png" alt=""
+                            class="discovery__container--info__avatar--one">
+                        <img src="img/section__discovery/avatar/02.png" alt=""
+                            class="discovery__container--info__avatar--second">
+                        <img src="img/section__discovery/avatar/03.png" alt=""
+                            class="discovery__container--info__avatar--three">
+                    </div>
+                    <p>3 in stock</p>
+                </div>
+                <hr>
+                <div class="discovery__container--new">
+                    <div class="discovery__container--new__price">
+                        <img src="img/section__bid/icon/Line.svg" alt="">
+                        <p>Highest bid</p>
+                        <h5>0.001 ETH</h5>
+                    </div>
+                    <p>New bid 🔥</p>
+                </div>
+            </div>
+            <div class="discovery__main">
+                <img src="img/section__discovery/main/07.png" alt="">
+                <div class="discovery__container--price">
+                    <h4>Amazing digital art</h4>
+                    <div>2.45 ETH</div>
+                </div>
+                <div class="discovery__container--info">
+                    <div class="discovery__container--info__prof">
+                        <img src="img/section__discovery/avatar/01.png" alt=""
+                            class="discovery__container--info__avatar--one">
+                        <img src="img/section__discovery/avatar/02.png" alt=""
+                            class="discovery__container--info__avatar--second">
+                        <img src="img/section__discovery/avatar/03.png" alt=""
+                            class="discovery__container--info__avatar--three">
+                    </div>
+                    <p>3 in stock</p>
+                </div>
+                <hr>
+                <div class="discovery__container--new">
+                    <div class="discovery__container--new__price">
+                        <img src="img/section__bid/icon/Line.svg" alt="">
+                        <p>Highest bid</p>
+                        <h5>0.001 ETH</h5>
+                    </div>
+                    <p>New bid 🔥</p>
+                </div>
+            </div>
+            <div class="discovery__main alld">
+                <img src="img/section__discovery/main/08.png" alt="">
+                <div class="bid__container--price">
+                    <h4>Amazing digital art</h4>
+                    <div>2.45 ETH</div>
+                </div>
+                <div class="discovery__container--info">
+                    <div class="discovery__container--info__prof">
+                        <img src="img/section__discovery/avatar/01.png" alt=""
+                            class="discovery__container--info__avatar--one">
+                        <img src="img/section__discovery/avatar/02.png" alt=""
+                            class="discovery__container--info__avatar--second">
+                        <img src="img/section__discovery/avatar/03.png" alt=""
+                            class="discovery__container--info__avatar--three">
+                    </div>
+                    <p>3 in stock</p>
+                </div>
+                <hr>
+                <div class="discovery__container--new">
+                    <div class="discovery__container--new__price">
+                        <img src="img/section__bid/icon/Line.svg" alt="">
+                        <p>Highest bid</p>
+                        <h5>0.001 ETH</h5>
+                    </div>
+                    <p>New bid 🔥</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="discovery__main--more">
+            <button class="show-more">Load More</button>
+        </div>
+
+
+    </section>
+
+    <section class="earn container">
+        <div class="earn__container">
+            <div class="earn__text">
+                <p>Save your time with Stacks</p>
+                <h1>Earn free crypto with Crypter</h1>
+                <span>A creative agency that lead and inspire</span>
+            </div>
+            <div class="earn__btn">
+                <button><a href="">Earn now</a></button>
+                <button><a href="">Discover more</a></button>
+            </div>
+        </div>
+        <img src="img/section__earn/main.png" alt="" class="earn__img">
+    </section>
+
+
+    <footer class="footer container">
+        <div class="footer__container">
+            <div class="footer__logo--container">
+                <div class="footer__logo">
+                    <a href=""><img src="img/footer/icon/logo.svg" alt="" width="40"></a>
+                    <h1>crypter</h1>
+                </div>
+                <h4>The New Creative Economy.</h4>
+            </div>
+            <hr class="footer__liner--mob">
+            <div class="footer__naviqation--container">
+                <div class="footer__naviqation">
+                    <h4>Crypter</h4>
+                    <ul class="footer__naviqation--info">
+                        <li><a href="">Discover</a></li>
+                        <li><a href="">Connect&nbsp;wallet</a></li>
+                        <li><a href="">Create item</a></li>
+                    </ul>
+                </div>
+                <hr class="footer__liner--mob">
+                <div class="footer__naviqation">
+                    <h4>Info</h4>
+                    <ul class="footer__naviqation--info">
+                        <li><a href="">Download</a></li>
+                        <li><a href="">Demos</a></li>
+                        <li><a href="">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer__liner--mob">
+            <div class="footer__leter">
+                <h4>Join Newsletter</h4>
+                <p>Subscribe our newsletter to get more free design course and resource</p>
+                <div class="footer__leter--input">
+                    <input type="text" placeholder="Enter your email">
+                    <div class="footer__leter--arrow">
+                        <a href=""><img src="img/footer/icon/arrow.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <hr>
+
+            <div class="footer__copyright--text">
+                <span>Copyright © 2021 UI8 LLC. All rights reserved</span>
+                <div class="footer__copyright--container">
+                    <p>We use cookies for better service.</p>
+                    <div class="success-container">
+                        <span id="success" class="success">Accept</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/included.js"></script>
+    <script src="js/toggle.js"></script>
+    <script src="js/notification.js"></script>
+</body>
+
+</html>

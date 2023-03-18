@@ -1,0 +1,290 @@
+.collectible {
+    margin-top: 130px;
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        box-shadow: 0px 64px 64px -48px rgba(31, 47, 70, 0.12);
+        height: 443px;
+
+        img {
+            border-radius: 20px;
+        }
+
+        h4 {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    &__container {
+        img {
+            border-radius: 10px;
+        }
+
+        &--price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            div {
+                border: 2px solid #45B26B;
+                color: #45B26B;
+                padding: 2px 3px;
+                font-size: 12px;
+                line-height: 12px;
+            }
+        }
+
+        &--info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &__prof {
+                position: relative;
+            }
+
+            &__avatar {
+                &--one {
+                    position: absolute;
+                    left: 0;
+                    bottom: -13px;
+                }
+
+                &--second {
+                    position: absolute;
+                    left: 10px;
+                    bottom: -13px;
+                }
+
+                &--three {
+                    position: absolute;
+                    left: 20px;
+                    bottom: -13px;
+                }
+            }
+        }
+
+        &--new {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                font-size: 12px;
+                line-height: 12px;
+            }
+
+            &__price {
+                display: flex;
+                align-items: center;
+                gap: 9px;
+
+                h4 {
+                    font-size: 12px;
+                    line-height: 12px;
+                    font-style: bold;
+                }
+            }
+
+        }
+    }
+
+    &__main {
+
+        &--text {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &--btn {
+            height: 50px;
+            font-size: 14px;
+            line-height: 24px;
+            padding: 12px 16px;
+            border: 2px solid #DFE1E5;
+            cursor: pointer;
+            border-radius: 10px;
+            width: 160px;
+            text-align: center;
+
+            a {
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 12px;
+                color: #23262F;
+            }
+
+            &:hover {
+                transition: 0.5s;
+                background: #3772FF;
+                border: none;
+
+                a {
+                    color: #FCFCFD;
+                }
+            }
+        }
+
+        &--upload {
+            margin-top: 40px;
+
+            img {
+                margin-top: 20px;
+                cursor: pointer;
+            }
+
+
+        }
+
+        &--detail {
+            margin-top: 40px;
+            display: flex;
+            gap: 40px;
+            flex-direction: column;
+
+            input {
+                padding: 12px 16px;
+                border-radius: 10px;
+                border-color: #B1B5C4;
+            }
+
+            span {
+                color: #B1B5C4;
+            }
+
+            &__input {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+            }
+
+            &__menu {
+                display: flex;
+                align-items: start;
+                justify-content: space-between;
+
+                &--input {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                }
+
+                select {
+                    cursor: pointer;
+                    padding: 12px 150px 12px 12px;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        &--toggle {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            &__container {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            &__text {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            &__switch {
+                input[type="checkbox"] {
+                    position: relative;
+                    width: 80px;
+                    height: 40px;
+                    -webkit-appearance: none;
+                    outline: none;
+                    background: #E6E8EC;
+                    border-radius: 20px;
+                    transition: .5s;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+                }
+
+                input:checked[type="checkbox"] {
+                    background: #3772FF;
+                }
+
+                input:checked[type="checkbox"]:before {
+                    left: 40px;
+                }
+
+                input[type="checkbox"]:before {
+                    content: "";
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 20px;
+                    top: 0;
+                    left: 0;
+                    background: #fff;
+                    transition: .5s;
+                    transform: scale(1.1);
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+                }
+            }
+        }
+
+        &--ball {
+            margin-top: 30px;
+            display: flex;
+            gap: 8px;
+
+            &__container {
+                background: #F4F5F6;
+                border-radius: 16px;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                padding: 24px;
+                width: 162px;
+
+                img {
+                    width: 32px;
+                    cursor: pointer;
+                }
+
+                span {
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+        }
+
+        &--createbtn {
+            margin-top: 40px;
+            border-radius: 90px;
+            width: 168px;
+        }
+    }
+
+
+}
+
+.avatar-field {
+    cursor: pointer;
+}
+
+.avatar-field {
+    input {
+        display: none;
+    }
+}

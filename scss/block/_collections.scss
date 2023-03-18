@@ -1,0 +1,88 @@
+.collections {
+    &__container {
+        margin-top: 150px;
+        padding: 130px 0;
+        background-color: #F4F5F6;
+    }
+
+    &__title {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    &__block {
+        margin-top: 70px;
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__main {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        &--img {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &--secondary {
+            display: flex;
+            justify-content: center;
+
+            &--img {
+                display: flex;
+            }
+        }
+
+        h2 {
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        &--prof {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+
+            &__info {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            button {
+                padding: 6px 8px;
+                border-radius: 10px;
+                border: none;
+                cursor: pointer;
+
+                a {
+                    font-weight: 700;
+                    font-size: 12px;
+                    // line-height: 12px;
+                    color: #23262F;
+                }
+
+                &:hover {
+                    transition: 0.5s;
+                    background: #3772FF;
+
+                    a {
+                        color: #FCFCFD;
+                    }
+                }
+            }
+        }
+    }
+
+    img {
+        border-radius: 10px;
+    }
+}

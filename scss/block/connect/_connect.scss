@@ -1,0 +1,40 @@
+.connect {
+    margin-top: 80px;
+    margin-bottom: 200px;
+
+    h1 {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -0.02em;
+    }
+
+    hr {
+        margin-top: 40px;
+    }
+
+    &__container {
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__wallet {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+
+        &--container {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+
+            a {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 32px;
+                color: #23262F;
+            }
+        }
+    }
+}

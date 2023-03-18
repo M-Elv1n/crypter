@@ -1,0 +1,245 @@
+.header {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__body {
+        display: none;
+    }
+
+    img {
+        cursor: pointer;
+    }
+
+    h1 {
+        cursor: pointer;
+
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        hr {
+            width: 2px;
+            height: 40px;
+        }
+
+        &--title {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: -0.02em;
+        }
+
+        &--list {
+            display: flex;
+            gap: 10px;
+
+            a {
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 16px;
+            }
+
+            .discover {
+                color: #23262F;
+            }
+
+            .work {
+                color: #777E91;
+            }
+        }
+    }
+
+    &__login {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+
+        &--search {
+            input {
+                padding: 5px;
+                border-radius: 10px;
+                border-color: #E6E8EC;
+            }
+
+            position: relative;
+
+            img {
+                position: absolute;
+                right: 10px;
+                top: 5px;
+            }
+        }
+
+        &--img {
+            position: relative;
+
+            .green {
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                left: 10px;
+                bottom: 23px;
+                background: #45B36B;
+                border-radius: 8px;
+            }
+
+            &__mob {
+                display: none;
+
+                &--avatar {
+                    display: none;
+                }
+            }
+        }
+
+        &--btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            button {
+                padding: 12px 16px;
+                border-radius: 90px;
+                border: none;
+                cursor: pointer;
+
+                &:hover {
+                    transition: 0.5s;
+                    background: #3772FF;
+
+                    a {
+                        color: #FCFCFD;
+                    }
+                }
+            }
+
+            a {
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 16px;
+                color: #23262F;
+            }
+
+            &__wallet{
+                z-index: 3;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px #777E90 solid;
+        padding: 2px;
+        border-radius: 90px;
+
+        p {
+            font-size: 16px;
+            line-height: 17px;
+            color: #23262F;
+
+            &::after {
+                content: "ETH";
+                color: #45B36B;
+                padding-left: 3px;
+            }
+        }
+    }
+
+    // burger
+
+    &__hamburger {
+        &__container {
+            display: none;
+        }
+
+        display: none;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        z-index: 11;
+        overflow: hidden;
+        cursor: pointer;
+
+        span {
+            width: 30px;
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: #777E91;
+            transform: translate(-50%, -50%);
+            transition: all 0.5s
+        }
+    }
+
+    .header__hamburger span:nth-of-type(2) {
+        top: calc(50% - 5px);
+    }
+
+    .header__hamburger span:nth-of-type(3) {
+        top: calc(50% + 5px);
+    }
+
+    .header__hamburger.active span:first-of-type {
+        transform: translateX(100%);
+    }
+
+    .header__hamburger.active span:nth-of-type(2) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .header__hamburger.active span:nth-of-type(3) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .active {
+        // overflow: clip;
+        // position: fixed;
+        // right: 27px;
+    }
+
+    &__mobil {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        // height: 100%;
+        transform: translateX(-100%);
+        transition: transform 0.5s;
+        background: rgb(245, 241, 241);
+        backdrop-filter: grayscale(1) contrast(3) blur(10px);
+        z-index: 10;
+        height: 100vh;
+
+
+        &--search {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &--btn {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__register {
+        &--container {
+            display: flex;
+            align-items: center;
+            gap: 45px;
+        }
+    }
+}

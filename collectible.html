@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collectible</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="load"></div>
+    <ul class="notifications"></ul>
+
+    <header class="header container">
+        <div class="header__logo">
+            <a href=""><img src="img/header/logo.svg" alt="" width="40"></a>
+            <h1 class="header__logo--title">crypter</h1>
+            <hr>
+            <ul class="header__logo--list">
+                <li><a href="" class="discover">Discover</a></li>
+                <li><a href="" class="work">How it work</a></li>
+            </ul>
+        </div>
+        <div class="header__login">
+            <div class="header__login--search">
+                <input type="text" placeholder="search">
+                <img src="img/header/search.svg" alt="" width="16">
+            </div>
+            <div class="header__login--img">
+                <img src="img/header/call.svg" alt="">
+                <div class="green"></div>
+            </div>
+            <div class="header__login--btn">
+                <button class="header__login--btn__upload"><a href="uplode.html">Upload</a></button>
+            </div>
+            <div class="header__info">
+                <img src="img/section__bid/avatar/03.png" alt="">
+                <p>7.00698</p>
+            </div>
+        </div>
+
+
+        <div class="header__hamburger__container">
+            <div class="header__login--img__mob">
+                <img src="img/header/call.svg" alt="">
+                <div class="green"></div>
+            </div>
+
+            <img src="img/section__bid/avatar/03.png" alt="" class="header__login--img__mob--avatar">
+
+            <div class="header__hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="header__mobil">
+            <div class="header__mobil--logo">
+                <a href=""><img src="img/header/logo.svg" alt="" width="40"></a>
+                <h1 class="header__logo--title">crypter</h1>
+            </div>
+            <div class="header__mobil--search">
+                <input type="text" placeholder="search">
+                <img src="img/header/search.svg" alt="" width="16">
+            </div>
+            <div class="header__mobil--btn">
+                <button class="header__mobil--btn__upload"><a href="uplode.html">Upload</a></button>
+                <button class="header__mobil--btn__wallet"><a href="">Connect Wallet</a></button>
+            </div>
+        </div>
+
+        <div class="chk__switch">
+            <input class="btn-switch" type="checkbox" name="" id="chk">
+        </div>
+    </header>
+
+    <section class="collectible container">
+        <div class="collectible__main">
+
+            <div class="collectible__main--text">
+                <div class="collectible__title">
+                    <h1 class="">
+                        Create single <br> collectible</h1>
+                </div>
+                <div class="collectible__main--btn">
+                    <a href="">Switch to Multiple</a>
+                </div>
+            </div>
+
+            <div class="collectible__main--upload">
+                <div class="collectible__main--upload__text">
+                    <h4>Upload file</h4>
+                    <span>Drag or choose your file to upload</span>
+                </div>
+
+                <form>
+                    <div class="photo">
+                        <label class="avatar-field">
+                            <input type="file" name="avatar" id="avatar" accept="image/jpeg, image/png, video/mp4">
+                            <img src="img/section__collectible/uplode.png" alt="" id="preview">
+                        </label>
+                    </div>
+                </form>
+            </div>
+
+
+
+
+
+            <div class="collectible__main--detail">
+                <h4>Item Details</h4>
+
+                <div class="collectible__main--detail__input">
+                    <span>Item name</span>
+                    <input type="text" placeholder='e. g. "Redeemable Bitcoin Card with logo"'>
+                </div>
+
+                <div class="collectible__main--detail__input">
+                    <span>Description</span>
+                    <input type="text" placeholder='e. g. “After purchasing you will able to recived the logo...”'>
+                </div>
+
+                <div class="collectible__main--detail__menu">
+                    <div class="collectible__main--detail__menu--input">
+                        <span>Royalties</span>
+                        <select name="" id="">
+                            <option value="">10%</option>
+                            <option value="">20%</option>
+                            <option value="">30%</option>
+                            <option value="">40%</option>
+                            <option value="">50%</option>
+                            <option value="">60%</option>
+                            <option value="">70%</option>
+                            <option value="">80%</option>
+                            <option value="">90%</option>
+                            <option value="">100%</option>
+                        </select>
+                    </div>
+                    <div class="collectible__main--detail__menu--input">
+                        <span>Size</span>
+                        <input type="text" placeholder="e. g. Size">
+                    </div>
+                    <div class="collectible__main--detail__menu--input">
+                        <span>Propertie</span>
+                        <input type="text" placeholder="e. g. Propertie">
+                    </div>
+                </div>
+
+                <hr>
+            </div>
+
+            <div class="collectible__main--toggle">
+
+                <div class="collectible__main--toggle__container">
+                    <div class="collectible__main--toggle__text">
+                        <h3>Put on sale</h3>
+                        <span>You’ll receive bids on this item</span>
+                    </div>
+                    <div class="collectible__main--toggle__switch">
+                        <input type="checkbox" name="" id="">
+                    </div>
+                </div>
+
+                <div class="collectible__main--toggle__container">
+                    <div class="collectible__main--toggle__text">
+                        <h3>Put on sale</h3>
+                        <span>You’ll receive bids on this item</span>
+                    </div>
+                    <div class="collectible__main--toggle__switch">
+                        <input type="checkbox" name="" id="">
+                    </div>
+                </div>
+
+                <div class="collectible__main--toggle__container">
+                    <div class="collectible__main--toggle__text">
+                        <h3>Put on sale</h3>
+                        <span>You’ll receive bids on this item</span>
+                    </div>
+                    <div class="collectible__main--toggle__switch">
+                        <input type="checkbox" name="" id="">
+                    </div>
+                </div>
+
+                <div class="collectible__main--toggle__container">
+                    <div class="collectible__main--toggle__text">
+                        <h3>Put on sale</h3>
+                        <span>You’ll receive bids on this item</span>
+                    </div>
+                    <div class="collectible__main--toggle__switch">
+                        <input type="checkbox" name="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="collectible__main--ball">
+
+                <div class="collectible__main--ball__container">
+                    <img src="img/section__collectible/01.svg" alt="">
+                    <span>Create collection</span>
+                </div>
+
+                <div class="collectible__main--ball__container">
+                    <img src="img/section__collectible/02.svg" alt="">
+                    <span>Create collection</span>
+                </div>
+
+                <div class="collectible__main--ball__container">
+                    <img src="img/section__collectible/03.svg" alt="">
+                    <span>Crypto Legend - Professor</span>
+                </div>
+
+                <div class="collectible__main--ball__container">
+                    <img src="img/section__collectible/04.svg" alt="">
+                    <span>Legend Photography</span>
+                </div>
+
+            </div>
+
+            <button class="collectible__main--btn collectible__main--createbtn"><a href="">Create item</a></button>
+        </div>
+
+        <div class="collectible__box">
+            <img src="img/section__discovery/main/08.png" alt="">
+            <div class="collectible__container--price">
+                <h4>Amazing digital art</h4>
+                <div>2.45 ETH</div>
+            </div>
+            <div class="collectible__container--info">
+                <div class="collectible__container--info__prof">
+                    <img src="img/section__discovery/avatar/01.png" alt=""
+                        class="collectible__container--info__avatar--one">
+                    <img src="img/section__discovery/avatar/02.png" alt=""
+                        class="collectible__container--info__avatar--second">
+                    <img src="img/section__discovery/avatar/03.png" alt=""
+                        class="collectible__container--info__avatar--three">
+                </div>
+                <p>3 in stock</p>
+            </div>
+            <hr>
+            <div class="collectible__container--new">
+                <div class="collectible__container--new__price">
+                    <img src="img/section__bid/icon/Line.svg" alt="">
+                    <p>Highest bid</p>
+                    <h5>0.001 ETH</h5>
+                </div>
+                <p>New bid 🔥</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer container">
+        <div class="footer__container">
+            <div class="footer__logo--container">
+                <div class="footer__logo">
+                    <a href=""><img src="img/footer/icon/logo.svg" alt="" width="40"></a>
+                    <h1>crypter</h1>
+                </div>
+                <h4>The New Creative Economy.</h4>
+            </div>
+            <div class="footer__naviqation--container">
+                <div class="footer__naviqation">
+                    <h4>Crypter</h4>
+                    <ul class="footer__naviqation--info">
+                        <li><a href="">Discover</a></li>
+                        <li><a href="">Connect&nbsp;wallet</a></li>
+                        <li><a href="">Create item</a></li>
+                    </ul>
+                </div>
+                <div class="footer__naviqation">
+                    <h4>Info</h4>
+                    <ul class="footer__naviqation--info">
+                        <li><a href="">Download</a></li>
+                        <li><a href="">Demos</a></li>
+                        <li><a href="">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__leter">
+                <h4>Join Newsletter</h4>
+                <p>Subscribe our newsletter to get more free design course and resource</p>
+                <div class="footer__leter--input">
+                    <input type="text" placeholder="Enter your email">
+                    <div class="footer__leter--arrow">
+                        <a href=""><img src="img/footer/icon/arrow.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <hr>
+
+            <div class="footer__copyright--text">
+                <span>Copyright © 2021 UI8 LLC. All rights reserved</span>
+                <div class="footer__copyright--container">
+                    <p>We use cookies for better service.</p>
+                    <div class="success-container">
+                        <span id="success" class="success">Accept</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/load.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/file.js"></script>
+    <script src="js/dropdwn.js"></script>
+    <script src="js/toggle.js"></script>
+    <script src="js/notification.js"></script>
+</body>
+
+</html>

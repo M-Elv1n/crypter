@@ -1,0 +1,121 @@
+.footer {
+    margin-top: 100px;
+
+    &__container {
+        display: flex;
+        gap: 120px;
+    }
+
+    h1 {
+        cursor: pointer;
+    }
+
+    &__logo {
+        display: flex;
+        gap: 8px;
+
+        &--container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        h3 {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+
+    &__naviqation {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        &--container {
+            display: flex;
+            gap: 90px;
+        }
+
+        &--info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            a {
+                font-size: 14px;
+                line-height: 16px;
+                color: #777E90;
+            }
+        }
+    }
+
+    &__leter {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        p {
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        input {
+            padding: 14px 60px 14px 16px;
+            border: none;
+            border-radius: 90px;
+        }
+
+        &--input {
+            position: relative;
+        }
+
+        &--arrow {
+
+            display: inline;
+            padding: 2px 5px;
+            border-radius: 100%;
+            background: #3772FF;
+            position: absolute;
+            right: 264px;
+            top: 10px;
+        }
+    }
+
+    &__liner{
+        &--mob{
+            display: none;
+        }
+    }
+
+    &__copyright{
+        hr{
+            margin-top: 50px;
+            color: #E6E8EC;
+        }
+        &--text{
+            padding: 32px 0;
+            display: flex;
+            justify-content: space-between;
+            span{
+                color: #777E90;
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+        &--container{
+            display: flex;
+            gap: 16px;
+            p{
+                font-size: 12px;
+                line-height: 20px;
+                color: #23262F;
+            }
+            span{
+                cursor: pointer;
+                color: #3772FF;
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+    }
+}

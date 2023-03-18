@@ -1,0 +1,199 @@
+.seller {
+    padding-bottom: 130px;
+
+    &__container {
+        background: #F4F5F6;
+        margin-top: 130px;
+        padding-top: 130px;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--text {
+            p {
+                font-size: 24px;
+                line-height: 32px;
+                color: #777E91;
+            }
+
+            h1 {
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 48px;
+                letter-spacing: -0.01em;
+                color: #23262F;
+            }
+        }
+
+        &--day {
+            background: #FCFCFD;
+            border: 2px solid #E6E8EC;
+            border-radius: 12px;
+            padding: 12px 200px 12px 16px;
+            font-size: 14px;
+            line-height: 24px;
+            color: #23262F;
+        }
+    }
+
+    &__slider {
+        margin-top: 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__items {
+        position: relative;
+        overflow: hidden;
+        width: 1000px;
+        height: 300px;
+    }
+
+    &__item {
+        display: flex;
+        width: 1000px;
+        height: 300px;
+        gap: 40px;
+        position: absolute;
+        transition: all ease .6s;
+        left: 0;
+        top: 0;
+        right: 0;
+    }
+
+    &__popular {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background: #FCFCFD;
+        border-radius: 16px;
+        padding: 20px 22px;
+
+        hr {
+            background: #E6E8EC;
+            height: 1px;
+        }
+
+        &--btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &__contain {
+                border-radius: 24px;
+                padding: 2px 8px;
+            }
+
+            &__edd {
+                background: #3772FF;
+            }
+
+            &__odell {
+                background: #9757D7;
+            }
+
+            &__kup {
+                background: #45B36B;
+            }
+
+            &__kunde {
+                background: #23262F;
+            }
+
+            &__payton {
+                background: #777E91;
+            }
+
+            span {
+                color: #FCFCFD;
+            }
+        }
+
+        &--prof {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            img {
+                width: 110px;
+                object-fit: cover;
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 24px;
+                color: #23262F;
+            }
+
+            span {
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 20px;
+                color: #353945;
+
+                &::after {
+                    content: "ETH";
+                    color: #777E91;
+                    font-size: 15px;
+                    line-height: 20px;
+                    padding-left: 3px;
+                }
+            }
+        }
+
+        &:hover {
+            transition: 0.5s;
+            box-shadow: 0px 64px 64px 48px rgba(31, 47, 70, 0.12);
+            cursor: pointer;
+        }
+    }
+
+    &__btn {
+        display: flex;
+    }
+
+    &__arrow {
+        // display: flex;
+        // gap: 20px;
+        // position: absolute;
+        // bottom: 40px;
+        // right: 486px;
+
+        img {
+            cursor: pointer;
+        }
+
+        &--border {
+            padding: 10px;
+            cursor: pointer;
+
+            &:hover {
+                border: 2px solid #E6E8EC;
+                border-radius: 100%;
+                transform: 0.5s;
+            }
+        }
+
+
+    }
+
+    .wrapper {
+        // overflow: hidden;
+        width: 1000px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+
+        &__arrow {
+            display: flex;
+            /* justify-content: space-between; */
+            gap: 100px;
+        }
+    }
+}

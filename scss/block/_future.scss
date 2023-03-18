@@ -1,0 +1,223 @@
+.future {
+    margin-top: 130px;
+    display: flex;
+    gap: 50px;
+
+    &__box {
+        display: flex;
+        gap: 50px;
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &--prof {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+
+            &__log {
+                display: flex;
+                gap: 15px;
+            }
+
+            &__text {
+                h3 {
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 32px;
+                    color: #23262F;
+                }
+
+                span {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #353945;
+                }
+            }
+
+            &__price {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: 2px;
+
+                span {
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 20px;
+                    color: #777E91;
+                }
+
+                div {
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 12px;
+                    color: #45B36B;
+                    padding: 8px 6px;
+                    border: 3px solid #45B36B;
+                    border-radius: 8px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &__bid {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        &--die {
+            display: flex;
+            gap: 25px;
+
+            &__prof {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                h1 {
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #23262F;
+                }
+
+                span {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #777E91;
+                }
+
+                button {
+                    padding: 8px 12px;
+                    border-radius: 90px;
+                    border: none;
+                    cursor: pointer;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #23262F;
+
+                    &:hover {
+                        transition: 0.5s;
+                        background: #3772FF;
+                        color: #FCFCFD;
+                    }
+
+                }
+            }
+
+            &__text {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                div {
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 12px;
+                    color: #45B36B;
+                    padding: 8px 6px;
+                    border: 3px solid #45B36B;
+                    border-radius: 8px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        hr {
+            background: #E6E8EC;
+            height: 1px;
+        }
+    }
+
+    &__lates {
+        display: flex;
+        gap: 25px;
+
+        h4 {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 20px;
+            color: #777E91;
+        }
+
+        &--line {
+            background: #E6E8EC;
+            width: 1px;
+        }
+
+        &--prof {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            &:nth-child(n+5) {
+                display: none;
+            }
+
+            &__info {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            span {
+                &::after {
+                    content: "ETH";
+                    color: #777E91;
+                    font-size: 16px;
+                    line-height: 20px;
+                    padding-left: 3px;
+                }
+            }
+        }
+
+        &--btn {
+            position: relative;
+
+            button {
+                padding: 12px 16px;
+                border-radius: 90px;
+                border: none;
+                cursor: pointer;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 16px;
+                color: #23262F;
+
+                &:hover {
+                    transition: 0.5s;
+                    background: #3772FF;
+                    color: #FCFCFD;
+
+                    .arrow {
+                        border: solid #FCFCFD;
+                    }
+                }
+            }
+
+        }
+    }
+
+    &__liner {
+        &--mob {
+            display: none;
+        }
+    }
+}
+
+.ad-visible{
+    display: block !important;
+}

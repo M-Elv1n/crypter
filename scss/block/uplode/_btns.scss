@@ -1,0 +1,45 @@
+.btns {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__btn {
+        padding: 12px 6px;
+        display: flex;
+        gap: 10px;
+        border: 1px #777E90 solid;
+        padding: 10px;
+        border-radius: 90px;
+
+        a {
+            color: #23262F;
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        &:hover {
+            transition: 0.5s;
+            background: #3772FF;
+            border: none;
+            cursor: pointer;
+
+            a {
+                color: #FCFCFD;
+            }
+        }
+    }
+
+    &__info{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        &--home{
+            color: #777E90;
+        }
+        &--upload{
+            color: #23262F;
+            font-weight: 700;
+        }
+    }
+}

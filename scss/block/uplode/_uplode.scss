@@ -1,0 +1,60 @@
+.uplode {
+    margin-top: 70px;
+    text-align: center;
+
+    h1 {
+        font-size: 46px;
+        line-height: 50px;
+    }
+
+    span {
+        color: black;
+    }
+
+    &__text {
+        padding-top: 20px;
+        color: #777E90;
+    }
+
+    &__main {
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+
+        &--btn {
+            width: 200px;
+            border: 1px #777E90 solid;
+            padding: 10px;
+            border-radius: 90px;
+
+            a {
+                color: #23262F;
+                font-size: 14px;
+                line-height: 16px;
+            }
+
+            &:hover {
+                transition: 0.5s;
+                background: #3772FF;
+                border: none;
+                cursor: pointer;
+
+                a {
+                    color: #FCFCFD;
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        color: #777E90;
+        margin-top: 60px;
+    }
+}
